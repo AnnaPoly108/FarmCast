@@ -1,117 +1,60 @@
-🌾 FarmCast — AI Powered Milk Analysis System
+# 🌾 FarmCast – AI Powered Milk Analysis System
 
-FarmCast is an advanced web application designed to assist dairy farmers, milk collection centers, and quality analyzers by predicting:
+FarmCast is an AI-driven web application that predicts **Milk Price**, **Milk Quality**, and **Cow Breed Type** using Machine Learning models trained on real-world MILMA dairy datasets.
 
-✔ Milk Price
-✔ Milk Quality (Low, Medium, High)
-✔ Cow Breed Type (Local / Jersey / Holstein-Friesian / Crossbreed)
+It helps dairy farmers and collection centers make **fast, accurate, and data-driven decisions** based on milk composition.
 
-Using only four inputs:
+---
 
-SNF (Solid-Not-Fat)
+## 📌 Features
 
-CLR (Corrected Lactometer Reading)
+### 🧠 Machine Learning Predictions
+- 💰 **Price Prediction** (Random Forest Regressor)
+- 🧪 **Quality Prediction** (KMeans Clustering → 0 = Low, 1 = Medium, 2 = High)
+- 🐄 **Breed Prediction** (Random Forest Classifier)
 
-FAT
+### 🎨 Modern UI (Frontend)
+- Transparent navbar with animated underline
+- Glassmorphism-style cards
+- 4-image background slideshow
+- Clean, responsive Bootstrap design
+- Interactive feature cards on homepage
 
-Temperature
+### 🔐 Authentication System
+- User Registration
+- User Login
+- Sessions & Access Control
 
-FarmCast leverages Machine Learning models trained on real-world MILMA dairy datasets to deliver accurate predictions instantly.
+### 📊 Input Parameters
+Users provide:
+- **SNF**
+- **CLR**
+- **Temperature**
+- **FAT**
 
-🚀 Features
-🔹 AI-Powered Predictions
+Output includes:
+- Predicted Price  
+- Predicted Quality (0/1/2 + Text)  
+- Predicted Breed  
 
-Random Forest Regressor → Price Prediction
+---
 
-Random Forest Classifier → Breed Prediction
+## 🛠️ Tech Stack
 
-KMeans Clustering → Milk Quality Prediction
+### **Backend**
+- Python  
+- Flask  
+- Joblib  
+- Scikit-Learn  
 
-🔹 Beautiful Modern UI
+### **Frontend**
+- HTML  
+- CSS  
+- Bootstrap  
+- Custom Animations  
 
-Responsive Bootstrap layout
+### **Machine Learning**
+- RandomForestRegressor  
+- RandomForestClassifier  
+- KMeans Clustering  
 
-Transparent navbar with animated underlines
-
-Glassmorphic cards
-
-4-image hero background slideshow
-
-Smooth animations and interactive icons
-
-🔹 User Authentication
-
-Register and Login system
-
-Session-based user handling
-
-🔹 User-Friendly Input Form
-
-Clean, simple interface for entering SNF, CLR, FAT, and Temperature.
-
-🔹 Instant Visual Results
-
-Displays:
-
-Predicted Price
-
-Predicted Quality (numeric + label)
-
-Predicted Breed
-
-🛠 Tech Stack
-Machine Learning
-
-Python
-
-Scikit-Learn
-
-Pandas
-
-Joblib
-
-Backend
-
-Flask
-
-Session Authentication
-
-Model Inference API
-
-Frontend
-
-HTML, CSS, Bootstrap
-
-Custom animations
-
-Glassmorphism design
-
-Background slideshow
-
-🎯 Why This Project Is Useful
-
-FarmCast provides:
-
-⚖ Fair milk pricing using AI
-
-🔍 Transparent quality analysis
-
-🐄 Breed determination for dairy centers
-
-⏱ Instant predictions, reducing manual errors
-
-📊 Data-driven insights, improving farmer trust
-
-🧪 Supports automation in dairy collection centers
-
-This system can be expanded for:
-
-Bulk milk collection units
-
-Dairy IoT devices
-
-Mobile-based milk testing
-
-Integrating fat/SNF sensors
-
-Dairy procurement management
