@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg px-3 fixed-top shadow-none transparent-nav"
+     style="z-index: 1000;">
+
+  <a class="navbar-brand fw-bold text-white" href="/" style="font-size: 22px;">FarmCast</a>
+
+  <div class="ms-auto d-flex align-items-center">
+
+    {% if session.get("user") %}
+      
+      <span class="text-white me-3" style="font-size: 16px;">
+        Welcome, <strong>{{ session.get('user') }}</strong>
+      </span>
+
+      <a href="/logout" class="nav-underline-btn">Logout</a>
+
+    {% else %}
+
+      <a href="/login" class="nav-underline-btn">Login</a>
+      <a href="/register" class="nav-underline-btn">Register</a>
+
+    {% endif %}
+
+  </div>
+</nav>
+
+<style>
+  /* Make navbar fully transparent */
+  .transparent-nav {
+    background: transparent !important;
+    backdrop-filter: blur(0px); /* You can increase blur if needed */
+    border: none;
+  }
+
+  .nav-underline-btn {
+    position: relative;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+  }
+
+  /* sliding underline animation */
+  .nav-underline-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #ffae00;
+    transition: width 0.3s ease;
+  }
+
+  .nav-underline-btn:hover::after {
+    width: 100%;
+  }
+
+  .nav-underline-btn:hover {
+    color: #ffae00 !important;
+  }
+</style>
